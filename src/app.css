@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    html, body {
-        @apply w-full h-full bg-gray-200;
-    }
+@layer components {
+	html,
+	body {
+		@apply w-full h-full bg-gray-200;
+	}
 }
 
 @layer components {
-    .countdown {
-        @apply w-full h-full;
-    }
+	.countdown {
+		@apply w-full h-full;
+	}
 }
