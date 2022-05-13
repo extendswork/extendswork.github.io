@@ -32,8 +32,9 @@
 	</h3>
 	<div class="lg:w-1/3 w-2/3 h-9 bg-gray-400 rounded-full dark:bg-gray-700">
 		<div
-			class="h-9 bg-indigo-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full flex flex-col justify-center justify-items-center items-center"
+			class="h-9 bg-indigo-500 text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full flex flex-col justify-center justify-items-center items-center"
 			style="width: 45%"
+			translate="no"
 		>
 			45%
 		</div>
