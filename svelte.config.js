@@ -1,17 +1,26 @@
-import adapter from '@sveltejs/adapter-static';
-
-export default {
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from "svelte-preprocess";
+import svg from '@poppanator/sveltekit-svg'
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
-		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
-			fallback: null,
-			precompress: false
-		}),
-
-		prerender: {
-			default: true
+		adapter: adapter(),
+		vite: {
+			plugins: [svg({
+				includePaths: ["./src/assets"],
+				svgoOptions: {
+					multipass: true,
+					plugins: ["preset-default"],
+				},
+			})]
 		}
-	}
+	},
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+	],
+
 };
+
+export default config;

@@ -1,8 +1,11 @@
 module.exports = {
-	jit: true,
-	content: ['./src/**/*.{html,js,svelte,css}'],
-	theme: {
-		extend: {}
-	},
-	plugins: []
+  jit: true,
+  darkMode: 'class',
+  content: [
+    './src/**/*.{html,js,svelte,css,ts}',
+  ],
+  theme: {
+    extend: {}
+  },
+  plugins: [require('tailwind-scrollbar'),]
 };
